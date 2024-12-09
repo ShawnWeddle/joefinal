@@ -16,7 +16,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
+      position: relative; /* Allow absolute positioning for the image */
     }
 
     /* Quote container */
@@ -86,59 +86,62 @@
       transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
-    /* Positioning for images */
-    #image1, #image2 {
-      position: absolute; /* Position the images in front */
-      z-index: 2; /* Keep them in front */
+    /* Image container styling */
+    #alertImage {
+      position: absolute; /* Position it relative to the body */
+      top: 50%; /* Center it vertically */
+      left: 50%; /* Center it horizontally */
+      transform: translate(-50%, -50%); /* Adjust position to truly center */
+      z-index: 2; /* Ensure it's above the quote container */
     }
-
-    /* Image map styling */
-    area {
-      cursor: pointer;
-    }
-  #image3 {      position: absolute; /* Position the images in front */
-      z-index: 2; /* Keep them in front */
-}
-#image4 {      position: absolute; /* Position the images in front */
-      z-index: 2; /* Keep them in front */
-}
-  #image {      position: absolute; /* Position the images in front */
-      z-index: 2; /* Keep them in front */
-}
   </style>
-
   <script type="text/javascript">
-    // Function to hide an image when a hotspot is clicked
-    function hideImage(imageId) {
-      var image = document.getElementById(imageId);
-      image.style.display = 'none'; // Hide the image
+    // Function to hide the image and play sound
+    function hideImage() {
+      // Find the image and hide it
+      var image = document.getElementById('alertImage');
+      image.style.display = 'none';
+
+      // Play the sound
+      var audio = document.getElementById('alertSound');
+      audio.play();
+    }
+
+    // Function for second hotspot action to also hide the image and play sound
+    function secondAction() {
+      // Hide the image and play sound
+      hideImage();
     }
   </script>
 </head>
 
 <body>
 
-<!-- Quote container -->
-  <div class="quote-container">
-    <div class="quote"><a href="Index.html">I can reason down or deny everything, except this perpetual Belly: feed he must and will, and I cannot make him respectable.</a></div>
-    <div class="author">- Ralph Waldo Emerson</div>
-</div>
+  <!-- Audio element -->
+  <audio id="alertSound" src="Sounds/windows-notification.mp3" preload="auto"></audio>
 
-  <!-- First Image with Image Map --><!-- Second Image with Image Map -->
-<img id="image2" src="../Images/alert7.jpg" width="535" height="301" alt="Alert Image 2" usemap="#imageMap2" /><img id="image1" src="../Images/alert1.jpg" width="500" height="302" alt="Alert Image 1" usemap="#imageMap1" />
-<map name="imageMap1">
-  <!-- Hotspot for Image 1 -->
-  <area shape="rect" coords="460,12,485,45" href="javascript:void(0);" onClick="hideImage('image1')" alt="Hotspot 1" title="Click to hide image" />
-  <area shape="rect" coords="192,181,311,288" href="javascript:void(0);" onClick="hideImage('image1')" alt="Hotspot 2" title="Click to hide image" />
-</map>
-  <map name="imageMap2">
-    <!-- Hotspot for Image 2 -->
-    <area shape="rect" coords="480,-100,747,50" href="javascript:void(0);" onClick="hideImage('image2')" alt="Hotspot 3" title="Click to hide image" />
-    <area shape="rect" coords="295,162,429,289" href="javascript:void(0);" onClick="hideImage('image2')" alt="Hotspot 4" title="Click to hide image" />
-	  <area shape="rect" coords="113,188,233,272" href="javascript:void(0);" onClick="hideImage('image2')" alt="Hotspot 4" title="Click to hide image" />
-	  
+  <img src="../Images/giphy.gif" width="200" height="200" alt=""/>
+
+  <!-- Image with image map -->
+  <img src="../Images/alert 2.jpg" width="550" height="293" alt="Image with Hotspot" usemap="#alertMap" id="alertImage" />
+
+  <!-- Image Map Definition -->
+  <map name="alertMap">
+    <!-- First Hotspot: Rectangular Area (hide the image) -->
+    <area shape="rect" coords="383,227,506,268" href="javascript:void(0);" onclick="hideImage()" alt="First Hotspot" title="Click here to hide image">
+    
+    <!-- Second Hotspot: Rectangular Area (also hides the image) -->
+    <area shape="rect" coords="515,-66,615,34" href="javascript:void(0);" onclick="secondAction()" alt="Second Hotspot" title="Click here to hide image">
   </map>
-	
+
+  <!-- Quote container -->
+  <div class="quote-container">
+    <div class="quote"><a href="/Project4/">Check impulse; quench appetite; keep reason under its own control.</a></div>
+    <div class="author">- Marcus Aurelius</div>
+  </div>
+
 </body>
 </html>
+
+
 

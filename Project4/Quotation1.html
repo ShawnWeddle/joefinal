@@ -85,14 +85,13 @@
     }
   </style>
 <script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
 function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
-
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
 }
 
 function MM_findObj(n, d) { //v4.01
@@ -107,15 +106,15 @@ function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
-  </script>
+</script>
 </head>
-<body onLoad="MM_preloadImages('Images/greek.gif','../Images/76e2e459439d213f84f5b9a60f165efd.gif')">
-  <img src="../Images/paint.jpg" alt="" width="358" height="682" onMouseOver="MM_swapImage('Image1','','../Images/76e2e459439d213f84f5b9a60f165efd.gif',1)" onMouseOut="MM_swapImgRestore()"/><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','Images/greek.gif',1)"></a>
+<body onLoad="MM_preloadImages('Images/greek.gif')">
+  <a href="/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','Images/greek.gif',1)"><img src="Images/gruk.jpg" alt="" width="236" height="354" id="Image1"></a>
 <!-- Quote container -->
   <div class="quote-container">
-    <div class="quote"><a href="Index.html">The most violent appetites in all creatures are lust and hunger; the first is a perpetual call upon them to propagate their kind, the latter to preserve themselves.</a></div>
-    <div class="author">- Joseph Addison</div>
+    <div class="quote"><a href="/Project4/">"Nothing in the world is so incontinent as a man's cursed appetite."</a></div>
+    <div class="author">- Homer</div>
 </div>
-<img src="../Images/alert5.jpg" alt="" width="508" height="313" id="Image1"/>
+
 </body>
 </html>
