@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleek & Modern Website</title>
+  <style>
+    /* General body styles */
+    body {
+    font-family: 'Arial', sans-serif;
+    margin-top: 60px;
+    margin-right: 60px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    background-color: #000;
+    color: #333;
+    }
+
+    /* Banner styling */
+    #banner {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    /* Main container */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 200px;
+    }
+
+    /* Each section's styles */
+    .section {
+      width: 25%; /* Each section takes up 48% of the container width */
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .section:hover {
+      transform: scale(1.05);
+    }
+
+    /* Image styling */
+    .section img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Section titles */
+    .section h2 {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    /* Mute/Unmute button styles */
+    .mute-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .mute-btn:hover {
+    background-color: #555;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .section {
+        width: 100%; /* Stack sections on smaller screens */
+      }
+    }
+  </style>
+  <script type="text/javascript">
+    function MM_swapImgRestore() { //v3.0
+      var i, x, a = document.MM_sr;
+      for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+    
+    function MM_preloadImages() { //v3.0
+      var d = document;
+      if (d.images) {
+        if (!d.MM_p) d.MM_p = new Array();
+        var i, j = d.MM_p.length, a = MM_preloadImages.arguments;
+        for (i = 0; i < a.length; i++)
+          if (a[i].indexOf("#") != 0) {
+            d.MM_p[j] = new Image;
+            d.MM_p[j++].src = a[i];
+          }
+      }
+    }
+
+    function MM_findObj(n, d) { //v4.01
+      var p, i, x;
+      if (!d) d = document;
+      if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+        d = parent.frames[n.substring(p + 1)].document;
+        n = n.substring(0, p);
+      }
+      if (!(x = d[n]) && d.all) x = d.all[n];
+      for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+      for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+      if (!x && d.getElementById) x = d.getElementById(n);
+      return x;
+    }
+
+    function MM_swapImage() { //v3.0
+      var i, j = 0, x, a = MM_swapImage.arguments;
+      document.MM_sr = new Array;
+      for (i = 0; i < (a.length - 2); i += 3)
+        if ((x = MM_findObj(a[i])) != null) {
+          document.MM_sr[j++] = x;
+          if (!x.oSrc) x.oSrc = x.src;
+          x.src = a[i + 2];
+        }
+    }
+
+    // Function to toggle mute/unmute
+    let isMuted = false;
+    function toggleMute() {
+      const audioElement = document.getElementById('background-audio');
+      if (isMuted) {
+        audioElement.muted = false;
+        isMuted = false;
+        document.getElementById('mute-button').innerText = 'Mute';
+      } else {
+        audioElement.muted = true;
+        isMuted = true;
+        document.getElementById('mute-button').innerText = 'Unmute';
+      }
+    }
+  </script>
+</head>
+<body onLoad="MM_preloadImages('Images/Image3.jpg','Images/A2.jpg','Images/DBO.gif','Images/giphy (32) (2).gif','Images/0dolvq8uts181.gif','Images/giphy (2).gif','../Images/alert5.jpg','../Images/76e2e459439d213f84f5b9a60f165efd.gif','../Images/alert7.jpg','../Images/giphy.gif','../Images/alert1.jpg')">
+
+  <!-- Banner at the top -->
+  <div id="banner"><a href="../Index.html"> Joseph Pine Portfolio COMM 420 Interactive Media Production </a></div>
+
+  <!-- Main container that holds the 4 sections -->
+<div class="container">
+    
+    <!-- Section 1 -->
+  <div class="section">
+      <h2>Homer</h2>
+      <a href="Quotation1.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','Images/giphy (2).gif',1)">
+        <img src="Images/pizza-pie-olives-a2b41f-1024.jpg" alt="" width="1024" height="710" id="Image1" onMouseOver="MM_swapImage('Image2','','../Images/alert5.jpg',1)" onMouseOut="MM_swapImgRestore()">
+      </a>
+    </div>
+
+    <!-- Section 2 -->
+  <div class="section">
+      <h2>Marcus Aurelius</h2>
+      <a href="project2.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','Images/A2.jpg',1)">
+      </a>
+      <a href="Quotation2.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','Images/DBO.gif',1)">
+        <img src="Images/Cheeseburger.jpg" alt="" width="2700" height="1800" id="Image2" onMouseOver="MM_swapImage('Image4','','../Images/alert1.jpg',1)" onMouseOut="MM_swapImgRestore()">
+      </a>
+    </div>
+
+    <!-- Section 3 -->
+  <div class="section">
+      <h2>Ralph Waldo Emerson</h2>
+      <a href="Quotation3.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','Images/giphy (32) (2).gif',1)">
+        <img src="Images/pancakes-with-butter-and-maple-syrup.jpg" alt="" width="3888" height="2592" id="Image3" onMouseOver="MM_swapImage('Image1','','../Images/alert7.jpg',1)" onMouseOut="MM_swapImgRestore()">
+      </a>
+    </div>
+
+    <!-- Section 4 -->
+  <div class="section">
+      <h2>Joseph Addison</h2>
+      <a href="Quotation4.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','Images/0dolvq8uts181.gif',1)">
+        <img src="Images/istockphoto-667107068-612x612.jpg" alt="" width="612" height="408" id="Image4" onMouseOver="MM_swapImage('Image2','','../Images/giphy.gif',1)" onMouseOut="MM_swapImgRestore()">
+      </a>
+    </div>
+  </div>
+
+  <!-- Background Music (MP3 file) -->
+  <audio id="background-audio" autoplay loop>
+    <source src="../Sounds/Monplaisir - 40_04.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Mute/Unmute button -->
+<button id="mute-button" class="mute-btn" onclick="toggleMute()">Mute</button>
+
+</body>
+</html>

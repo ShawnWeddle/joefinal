@@ -3,9 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Joseph Pine Portfolio - COMM 420</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General body styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Banner styling with gradient and shadow */
+    #banner {
+      background: linear-gradient(45deg, rgba(51, 51, 51, 0.7), rgba(17, 17, 17, 0.9)), url('Images/banner-image.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 3em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-bottom: 3px solid #fff;
+      animation: slideIn 1s ease-out;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Main container */
+    .container {
+      display: block;
+      margin: 40px auto;
+      max-width: 1200px;
+      padding: 20px;
+    }
+
+    /* Each section's styles */
+    .section {
+      width: 100%;
+      margin: 20px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .section:hover {
+      transform: scale(1.03);
+    }
+
+    /* Button container */
+    .button-container {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .button-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .button-container:hover img {
+      transform: scale(1.05);
+    }
+
+    .button-container a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+    }
+
+    /* Hover effect for the links */
+    .button-container:hover {
+      cursor: pointer;
+      filter: brightness(1.1);
+    }
+
+    /* Transparent section description */
+    .section-description {
+      padding: 15px;
+      background-color: rgba(34, 34, 34, 0.7); /* Semi-transparent background */
+      font-size: 1.2em;
+      line-height: 1.6;
+      border-radius: 10px;
+      backdrop-filter: blur(10px); /* Optional blur effect */
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      #banner {
+        font-size: 2em;
+      }
+
+      .section {
+        width: 100%;
+      }
+
+      .section-description {
+        font-size: 1em;
+      }
+    }
+  </style>
+
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+
 </head>
-<body style="background-color: gray;">
-  Hey Joe
+<body onLoad="MM_preloadImages('Images/b6849bba245a533e608908fc3f14a6c5.gif','Images/4264a4ba598c17ef23685260a13bd849.gif','Images/fjDIBvQjjE3G.gif','Images/VQcm.gif')">
+
+  <!-- Banner at the top -->
+  <div id="banner">
+    Joseph Pine Portfolio - COMM 420 Interactive Media Production
+  </div>
+
+  <!-- Main container that holds the 4 sections -->
+  <div class="container">
+    
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="button-container">
+        <a href="#"></a><a href="Project1/THEMUTT.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','Images/fjDIBvQjjE3G.gif',1)"><img src="Images/76e2e459439d213f84f5b9a60f165efd.gif" alt="" width="640" height="640" id="Image1"></a>
+      </div>
+      <div class="section-description">
+        Project 1 - My first webpage!
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="button-container">
+        <a href="#"></a><a href="Project 2/project2.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','Images/VQcm.gif',1)"><img src="Images/matrix-code-animation-gif-free-animated-background-716.gif" alt="" width="800" height="600" id="Image2"></a>
+      </div>
+      <div class="section-description">
+        Project 2 - A collection of Images. 
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <div class="button-container">
+        <a href="#"></a><a href="Project 4/Index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','Images/4264a4ba598c17ef23685260a13bd849.gif',1)"><img src="Images/QBJxeH.gif" alt="" width="720" height="404" id="Image5"></a>
+      </div>
+      <div class="section-description">
+        Project 3 - This one was tough.
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <div class="button-container">
+        <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','Images/b6849bba245a533e608908fc3f14a6c5.gif',1)">
+          <img src="Images/jbut5yiy0b461.gif" alt="" width="1920" height="1080" id="Image4">
+        </a>
+      </div>
+      <div class="section-description">
+        Project 4 - Final project!
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>
+
+
+
+

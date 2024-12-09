@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Quote Presentation</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* Black background */
+      color: #fff; /* White text */
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Quote container */
+    .quote-container {
+      text-align: center;
+      width: 80%; /* Responsive container width */
+      max-width: 600px; /* Limit width on larger screens */
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.7); /* Slight transparency */
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 1s forwards 0.5s; /* Fade-in animation with delay */
+    }
+
+    /* Text styling for the quote */
+    .quote {
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: #fff;
+      opacity: 0;
+      animation: fadeInText 2s forwards 1s; /* Text animation after quote container */
+    }
+
+    /* Author styling */
+    .author {
+      font-size: 1.2em;
+      font-style: italic;
+      margin-top: 15px;
+      color: #fff;
+      opacity: 0;
+      animation: fadeInText 2s forwards 1.5s; /* Author animation after text */
+    }
+
+    /* Fade-in animation for the container */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Text fade-in animation */
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Hover effect on the quote */
+    .quote-container:hover {
+      background-color: rgba(255, 255, 255, 0.1); /* Lightens background on hover */
+      cursor: pointer;
+      transform: translateY(-5px);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+  </style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+  </script>
+</head>
+<body onLoad="MM_preloadImages('Images/greek.gif','../Images/76e2e459439d213f84f5b9a60f165efd.gif')">
+  <img src="../Images/paint.jpg" alt="" width="358" height="682" onMouseOver="MM_swapImage('Image1','','../Images/76e2e459439d213f84f5b9a60f165efd.gif',1)" onMouseOut="MM_swapImgRestore()"/><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','Images/greek.gif',1)"></a>
+<!-- Quote container -->
+  <div class="quote-container">
+    <div class="quote"><a href="Index.html">The most violent appetites in all creatures are lust and hunger; the first is a perpetual call upon them to propagate their kind, the latter to preserve themselves.</a></div>
+    <div class="author">- Joseph Addison</div>
+</div>
+<img src="../Images/alert5.jpg" alt="" width="508" height="313" id="Image1"/>
+</body>
+</html>
